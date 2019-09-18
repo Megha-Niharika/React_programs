@@ -6,15 +6,26 @@ class App extends React.Component{
     {
         super()
         this.state = {
-          answer : "yes"
-    }
+          inloggedin : false
+        }
+
   }
   
     render()
     {
+      let wordDisplay 
+      if(this.state.inloggedin === true){
+        wordDisplay = "in"
+      }
+        else{
+          wordDisplay= "out"
+        }
+      
       return(
+
         <div>
-            <h1>state is {this.state.answer}</h1>
+            <h1>{wordDisplay}</h1>
+           
             </div>
       )
 

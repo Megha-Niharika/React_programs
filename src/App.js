@@ -1,34 +1,31 @@
 
+import React from "react"
 
-import React from 'react';
-class App extends React.Component{
-    constructor()
-    {
-        super()
-        this.state = {
-          inloggedin : false
-        }
 
-  }
-  
-    render()
-    {
-      let wordDisplay 
-      if(this.state.inloggedin === true){
-        wordDisplay = "in"
-      }
-        else{
-          wordDisplay= "out"
-        }
-      
-      return(
+class  App extends React.Component{
 
-        <div>
-            <h1>{wordDisplay}</h1>
-           
-            </div>
-      )
+ constructor()
+ {
+   super()
+   this.state = {
+     unreadmsg :[ 
+       "abhay girl",
+        "vivi "
+      ]
+   }
+ }
+ render()
+ {
+  return (
+    <div>
+<h2>you have {this.state.unreadmsg.length} unread msgs</h2>
+      </div>
+  )
+ }
 
-    }
-  }
-  export default App
+}
+
+
+
+
+export default App
